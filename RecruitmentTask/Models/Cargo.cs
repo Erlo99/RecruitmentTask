@@ -10,9 +10,10 @@ namespace RecruitmentTask.Models
     [Table("Cargo")] 
     public class Cargo
     {
-        public Cargo(int id, string name, int quantity, string barcode)
+        public Cargo(int id, int orderId, string name, int quantity, string barcode)
         {
             Id = id;
+            OrderId = orderId;
             Name = name;
             Quantity = quantity;
             Barcode = barcode;
@@ -20,6 +21,8 @@ namespace RecruitmentTask.Models
 
         [Key]
         public int Id { get; set; }
+        [Required]
+        public int OrderId { get; set; }
         public string Name { get; set; }
         [Required]
         public int Quantity { get; set; }

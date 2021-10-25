@@ -11,19 +11,16 @@ namespace RecruitmentTask.Models
     [Table("Order")]
     public class Order : Auditable
     {
-        public Order(int id, PersonalData buyerData, PersonalData sellerData, List<Cargo> cargos)
+        public Order(int id, PersonalData buyerData, PersonalData sellerData)
         {
             Id = id;
             BuyerData = buyerData;
             SellerData = sellerData;
-            this.cargos = cargos;
         }
 
         [Key]
         public int Id { get; set; }
         public PersonalData BuyerData { get; set; }
         public PersonalData SellerData { get; set; }
-        [Required]
-        public List<Cargo> cargos { get; set; }
     }
 }

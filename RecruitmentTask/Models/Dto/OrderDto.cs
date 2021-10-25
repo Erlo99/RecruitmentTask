@@ -11,7 +11,5 @@ namespace RecruitmentTask.Models.Dto
     {
         public PersonalData BuyerData { get; set; }
         public PersonalData SellerData { get; set; }
-        [Required]
-        public List<Cargo> cargos { get; set; }
     }
 }
